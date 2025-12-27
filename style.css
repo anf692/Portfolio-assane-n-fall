@@ -2,6 +2,7 @@
     --primary: #100E34;
     --secondary: #FFBF18;
     --tertiary:#FFFFFF;
+    --bg: #ececfa;
 }
 
 *{
@@ -48,7 +49,7 @@ header{
 
 .menu-btn{
     padding: 8px 15px;
-    background-color:var(--tertiary);
+    background-color:var(--secondary);
     border-radius: 8%;
 }
 
@@ -61,14 +62,19 @@ header{
 /* style pour la banniere */
 
 .hero{
+    position: relative;
     background-color:var(--tertiary);
     width: 100%;
     height: 450px;
     display: flex;
     justify-content: space-between ;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .hero-letf{
+    position: absolute;
+    left: 0;
     margin-top: 10%;
     margin-left: 5%;
 }
@@ -106,12 +112,147 @@ header{
 }
 
 .hero-right img{
-    margin:30px;
-    padding-left: 90px;
-    padding-right: 80px;
+    position:absolute;
+    top: 20px;
+    left: 850px;
+    width: 32%;
+    height: 90%;
+    padding-left: 10px;
+    margin-right: 0;
+   
+}
+
+/* 
+style pour la section a propos */
+
+.about-me{
+    display: flex;
+    margin: 5%;
 }
 
 
+.about-left img{
+    width: 500px;
+    height: 60%;
+    object-fit: contain;
+}
+
+.about-right{
+    margin-left: 5%;
+}
+
+.about-right h3{
+    font-size: 28px;
+    color: var(--secondary);
+    margin-bottom: 4%;
+}
+
+.about-right p{
+    color: var(--primary);
+    font-size: 14px;
+    line-height: 1.5;
+}
 
 
+.social-media{
+    font-size: 25px;
+}
 
+.social-media .fa-facebook, .social-media .fa-discord, .social-media .fa-linkedin{
+    background-color: var(--secondary);
+    border-radius: 50%;
+    margin: 10px;
+    width: 40px;
+    height: 35px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.social-media a{
+    color: var(--tertiary);
+}
+
+
+/* style pour les projets */
+
+.projets{
+    background-color: var(--bg);
+    height: 750px;
+    padding: 50px;
+}
+
+.projets h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.projets p{
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card-projet{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card-item{
+    background-color:var(--tertiary);
+    width: 32%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.card-item img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-item h3{
+    font-size: 20px;
+    color: var(--primary);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
+
+.card-item p{
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.card-item ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-left: 15px;
+}
+
+.card-item ul li{
+    color: #100E34;
+    background-color: #f5f3f3;
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.projet-btn{
+    text-align: center;
+}
+
+.projet-btn a{
+    padding: 20px 50px;
+    background-color: var(--tertiary);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--primary);
+}
