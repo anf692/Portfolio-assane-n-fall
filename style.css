@@ -173,17 +173,22 @@ style pour la section a propos */
 
 .about-right h3{
    font-size: 30px;
+   position: relative;
+  padding-bottom: 10px;
     color: var(--primary);
     margin-bottom: 4%;
 }
 
-.about-right h3::after{ 
+
+.about-right h3::after {
   content: '';
-  display: block;
-  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 250px;
   height: 4px;
-  background-color: var(--primary-light);
-  margin: 1rem auto 2rem;
+  background-color: var(--secondary);
+  border-radius: 10px;
 }
 
 
@@ -223,12 +228,25 @@ style pour la section a propos */
 }
 
 #projets h1{
+    position: relative;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     color: var(--primary);
     margin-bottom: 15px;
 }
+
+#projets h1::after{
+  content: '';
+  position: absolute;
+  left: 535px;
+  bottom: -7px;
+  width: 200px;
+  height: 4px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
 
 #projets .text{
     color: var(--primary);
@@ -328,12 +346,24 @@ style pour la section a propos */
 }
 
 #contact h2{
+    position: relative;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     color: var(--primary);
     margin-top: 90px;
     margin-bottom: 15px;
+}
+
+#contact h2::after{
+  content: '';
+  position: absolute;
+  left: 566px;
+  bottom: -7px;
+  width: 240px;
+  height: 4px;
+  background-color: var(--secondary);
+  border-radius: 10px;
 }
 
 #contact p{
