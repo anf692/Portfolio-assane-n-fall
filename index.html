@@ -18,23 +18,24 @@
             <div class="menu-item">
                 <nav>
                     <ul>
-                        <li><a href="#">A propos</a></li>
+                        <li><a href="#about-me">A propos</a></li>
                         <li><a href="#">Competences</a></li>
-                        <li><a href="#">Projet</a></li>
+                        <li><a href="#projets">Projet</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="menu-btn">
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <!-- banniere de la page -->
+        <section id="hero">
             <div class="hero-letf">
-                <h2>Salut!, je suis Assane Ndong <span>Fall.</span></h2>
+                <h2>Salut!, je suis Assane Ndong <span>FALL.</span></h2>
                 <strong>Developpeur web & web mobile IA</strong>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea quos consectetur <br> illo unde eveniet nobis inventore necessitatibus quam facere eos?</p><br>
                 <a href="#">A propos de moi</a>
@@ -45,7 +46,8 @@
             </div>
         </section>
 
-        <section class="about-me">
+        <!-- section a propos -->
+        <section id="about-me">
             <div class="about-left">
                 <img src="./images/assane-ndong-fall-2.png" alt="">
             </div>
@@ -67,12 +69,13 @@
             </div>
         </section>
 
-        <section class="projets">
+        <!-- section pour les projets realises -->
+        <section id="projets">
             <h1>Mes projets</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
             <div class="card-projet">
                 <div class="card-item">
-                    <img src="./images/Capture d’écran du 2025-12-27 20-12-21.png" alt="">
+                    <img src="./images/atelier5.png" alt="">
                     <h3>Lorem, ipsum dolor.</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, eveniet?</p>
                     <ul>
@@ -82,7 +85,7 @@
                 </div>
 
                 <div class="card-item">
-                    <img src="./images/Capture d’écran du 2025-12-27 20-12-21.png" alt="">
+                    <img src="./images/atelier6.png" alt="">
                     <h3>Lorem, ipsum dolor.</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, eveniet?</p>
                     <ul>
@@ -92,7 +95,7 @@
                 </div>
 
                 <div class="card-item">
-                    <img src="./images/Capture d’écran du 2025-12-27 20-12-21.png" alt="">
+                    <img src="./images/atelier5.png" alt="">
                     <h3>Lorem, ipsum dolor.</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, eveniet?</p>
                     <ul>
@@ -107,18 +110,18 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section id="contact">
             <h2>Contactez-moi</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, facilis.</p>
             <div class="contact-item">
                 <div class="contact-left">
                     <form action="#">
                         <label for="nom">Nom complet</label><br>
-                        <input type="text" id="nom" placeholder="Assane Ndong FALL"><br>
+                        <input type="text" id="nom" placeholder="Assane Ndong FALL" required><br>
                         <label for="email">Email</label><br>
-                        <input type="email" id="email" placeholder="fassane348@gmail.com"><br>
+                        <input type="email" id="email" placeholder="fassane348@gmail.com" required><br>
                         <label for="mgs">Message</label><br>
-                        <textarea name="msg" id="mgs"></textarea><br>
+                        <textarea name="msg" id="mgs" required></textarea><br>
                         <button><a href="#">Envoyer</a></button>
                     </form>
                 </div>
@@ -141,4 +144,6 @@
         <p>&copy;2025. Tous droits réservés </p>
 
     </footer>
+
 </body>
+</html>
