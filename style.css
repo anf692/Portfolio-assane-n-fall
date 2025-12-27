@@ -1,0 +1,117 @@
+:root{
+    --primary: #100E34;
+    --secondary: #FFBF18;
+    --tertiary:#FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--tertiary);
+}
+
+.menu{
+    margin: 30px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name h1{
+    font-size: 25px;
+    color:var(--tertiary);
+}
+
+.name span{
+    color: var(--secondary);
+}
+
+.menu-item nav ul{
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu-item nav ul li a{
+    color: var(--tertiary);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-btn{
+    padding: 8px 15px;
+    background-color:var(--tertiary);
+    border-radius: 8%;
+}
+
+.menu-btn a{
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+/* style pour la banniere */
+
+.hero{
+    background-color:var(--tertiary);
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.hero-letf{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.hero-letf h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+/* .hero-letf h2 span{
+    color: var(--secondary);
+} */
+
+.hero-letf strong{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.hero-letf p{
+    font-size: 14px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: var(--primary);
+}
+
+.hero-letf a{
+    padding: 10px 40px;
+    background-color: var(--secondary);
+    text-decoration: none;
+    color: var(--primary);
+    border-radius: 10px;
+}
+
+.hero-right img{
+    margin:30px;
+    padding-left: 90px;
+    padding-right: 80px;
+}
+
+
+
+
+
