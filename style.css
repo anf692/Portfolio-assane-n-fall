@@ -129,6 +129,7 @@ header{
 .hero-letf a{
     padding: 15px 40px;
     background-color: var(--secondary);
+     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     text-decoration: none;
     color: var(--primary);
     border-radius: 10px;
@@ -150,6 +151,32 @@ header{
     padding-left: 10px;
     margin-right: 0;
    
+}
+
+/* style pour les score */
+
+.score{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--bg);
+}
+
+.score-item{
+    padding: 20px 45px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--primary);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    transition: 0.5s;
+}
+
+.score-item:hover{
+    transform: scale(1.1);
+    background-color: var(--primary);
+    color: var(--tertiary);
 }
 
 /* 
@@ -262,6 +289,7 @@ style pour la section a propos */
 
 .card-item{
     background-color:var(--tertiary);
+     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     width: 31%;
     border-radius: 10px;
     overflow: hidden;
