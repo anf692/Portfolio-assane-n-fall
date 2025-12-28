@@ -1,0 +1,916 @@
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================
+   Ce fichier contient toutes les adaptations
+   pour différentes tailles d'écran
+   ============================================ */
+
+/* ============================================
+   BOUTON BURGER - Styles de base
+   ============================================ */
+
+/* Cacher le bouton burger et la checkbox par défaut (desktop) */
+.burger-checkbox {
+    display: none;
+}
+
+.burger-icon {
+    display: none;
+}
+
+/* Styles de base du bouton burger (sera activé uniquement en mobile) */
+.burger-icon {
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    z-index: 1000;
+    padding: 5px;
+}
+
+.burger-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Animation du burger quand il est ouvert */
+.burger-checkbox:checked ~ .burger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.burger-checkbox:checked ~ .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-checkbox:checked ~ .burger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================
+   DESKTOP - Assurer le layout flex (nom gauche, menu droite)
+   ============================================ */
+@media screen and (min-width: 1025px) {
+    
+    /* Menu de navigation - Desktop */
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* S'assurer que le burger reste caché sur desktop */
+    .burger-checkbox,
+    .burger-icon {
+        display: none !important;
+    }
+
+    /* Menu visible sur desktop */
+    .menu-item,
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* ============================================
+   TABLETTE - Écrans moyens (768px à 1024px)
+   ============================================ */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    
+    /* Menu de navigation - Tablette */
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Burger caché sur tablette */
+    .burger-checkbox,
+    .burger-icon {
+        display: none !important;
+    }
+
+    /* Menu visible sur tablette */
+    .menu-item,
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-item nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Section Hero - Tablette */
+    #hero {
+        height: auto;
+        min-height: 500px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .hero-letf {
+        position: relative;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .hero-letf h2 {
+        font-size: 28px;
+    }
+
+    .hero-letf strong {
+        font-size: 24px;
+    }
+
+    .hero-right img {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 60%;
+        max-width: 400px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Section Scores - Tablette */
+    .score {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .score-item {
+        padding: 15px 30px;
+        margin: 20px 0;
+        flex: 1 1 calc(33.333% - 20px);
+        min-width: 150px;
+    }
+
+    /* Section À propos - Tablette */
+    #about-me {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-left img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .about-right {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-right h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Section Compétences - Tablette */
+    #competences {
+        height: auto;
+        padding: 20px;
+    }
+
+    #competences h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+    }
+
+    .competence-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .competences-technique,
+    .Technologies {
+        margin: 20px;
+        padding: 30px 40px;
+    }
+
+    /* Section Projets - Tablette */
+    #projets {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    #projets h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+    }
+
+    .card-projet {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-item {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+
+    /* Section Contact - Tablette */
+    #contact {
+        height: auto;
+        padding: 20px;
+    }
+
+    #contact h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    .contact-right img {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        padding-right: 0;
+        margin: 20px auto;
+        display: block;
+    }
+}
+
+/* ============================================
+   MOBILE - Petits écrans (jusqu'à 768px)
+   ============================================ */
+@media screen and (max-width: 768px) {
+    
+    /* Header - Mobile */
+    header {
+        margin-bottom: 3%;
+    }
+
+    /* Menu de navigation - Mobile */
+    .menu {
+        margin: 15px;
+        padding: 15px 20px;
+        border-radius: 15px;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /* Nom à gauche */
+    .name {
+        flex: 1;
+    }
+
+    .name h1 {
+        font-size: 20px;
+        text-align: left;
+        margin: 0;
+    }
+
+    /* Afficher le bouton burger à droite */
+    .burger-checkbox {
+        display: none; /* Caché mais fonctionnel */
+    }
+
+    .burger-icon {
+        display: flex !important;
+        order: 2;
+    }
+
+    /* Cacher le menu et le bouton contact par défaut */
+    .menu-item,
+    .menu-btn {
+        display: none;
+        width: 100%;
+        order: 3;
+    }
+
+    /* Afficher le menu quand le burger est cliqué */
+    .burger-checkbox:checked ~ .menu-item,
+    .burger-checkbox:checked ~ .menu-btn {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .menu-item nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu-item nav ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu-item nav ul li a {
+        display: block;
+        padding: 12px 15px;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .menu-item nav ul li a:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+    .menu-btn {
+        text-align: left;
+        padding: 12px 0;
+        margin-top: 10px;
+    }
+
+    .menu-btn a {
+        display: inline-block;
+        padding: 12px 30px;
+    }
+
+    /* Section Hero - Mobile */
+    #hero {
+        height: auto;
+        min-height: auto;
+        padding: 20px 15px;
+        margin-bottom: 5%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-letf {
+        position: relative;
+        left: auto;
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-letf h2 {
+        font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .hero-letf strong {
+        font-size: 18px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .hero-letf p {
+        font-size: 13px;
+        margin: 15px 0;
+        line-height: 1.6;
+    }
+
+    .hero-letf a {
+        padding: 12px 30px;
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .hero-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .hero-right img {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        padding: 0;
+    }
+
+    /* Section Scores - Mobile */
+    .score {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+        margin-bottom: 5%;
+    }
+
+    .score-item {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .score-item h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .score-item p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .score-item i {
+        margin-right: 5px;
+    }
+
+    /* Section À propos - Mobile */
+    #about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 3% 0;
+        padding: 20px 15px;
+    }
+
+    .about-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .about-left img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .about-right {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .about-right h3 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-right h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+    }
+
+    .about-right p {
+        font-size: 13px;
+        text-align: justify;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .social-media {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .social-media a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    /* Section Compétences - Mobile */
+    #competences {
+        height: auto;
+        padding: 30px 15px;
+        margin-bottom: 5%;
+    }
+
+    #competences h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    #competences h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+    }
+
+    .competence-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .competences-technique,
+    .Technologies {
+        margin: 10px 0;
+        padding: 20px 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .competences-technique h3,
+    .Technologies h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .competences-technique ul {
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+    .competences-technique ul li {
+        margin-bottom: 8px;
+    }
+
+    .technologies-item {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .tech {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Section Projets - Mobile */
+    #projets {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    #projets h1 {
+        font-size: 24px;
+    }
+
+    #projets h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+    }
+
+    #projets .text {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .card-projet {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-item {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 25px;
+        box-sizing: border-box;
+    }
+
+    .card-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-item h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .card-item p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .card-item ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .card-item ul li {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .projet-btn {
+        margin-top: 20px;
+    }
+
+    .projet-btn a {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+
+    /* Section Contact - Mobile */
+    #contact {
+        height: auto;
+        padding: 30px 15px;
+        margin-bottom: 5%;
+    }
+
+    #contact h2 {
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    #contact h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .contact-left {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .contact-left form {
+        margin: 15px;
+    }
+
+    .contact-left label {
+        font-size: 14px;
+    }
+
+    .contact-left input,
+    .contact-left textarea {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    .contact-left button {
+        padding: 12px;
+    }
+
+    .contact-left button a {
+        font-size: 14px;
+    }
+
+    .contact-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .contact-right img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        padding-right: 0;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Footer - Mobile */
+    footer {
+        margin-top: 50px;
+        padding: 20px 15px;
+        border-radius: 30px 30px 0 0;
+    }
+
+    footer p {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    footer .logo-div p {
+        font-size: 18px;
+    }
+}
+
+/* ============================================
+   MOBILE TRÈS PETIT - Très petits écrans (jusqu'à 480px)
+   ============================================ */
+@media screen and (max-width: 480px) {
+    
+    /* Menu de navigation - Très petit mobile */
+    .menu {
+        margin: 10px;
+        padding: 12px 15px;
+    }
+
+    .name h1 {
+        font-size: 18px;
+    }
+
+    .burger-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .burger-icon span {
+        height: 2.5px;
+    }
+
+    .menu-item nav ul li a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .menu-btn {
+        padding: 10px 0;
+    }
+
+    .menu-btn a {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    /* Section Hero - Très petit mobile */
+    .hero-letf h2 {
+        font-size: 20px;
+    }
+
+    .hero-letf strong {
+        font-size: 16px;
+    }
+
+    .hero-letf p {
+        font-size: 12px;
+    }
+
+    .hero-letf a {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+
+    .hero-right img {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    /* Section Scores - Très petit mobile */
+    .score-item {
+        padding: 15px;
+    }
+
+    .score-item h2 {
+        font-size: 20px;
+    }
+
+    .score-item p {
+        font-size: 12px;
+    }
+
+    /* Section À propos - Très petit mobile */
+    .about-right h3 {
+        font-size: 20px;
+    }
+
+    .about-right p {
+        font-size: 12px;
+    }
+
+    /* Section Compétences - Très petit mobile */
+    #competences h2 {
+        font-size: 20px;
+    }
+
+    .competences-technique,
+    .Technologies {
+        padding: 15px 10px;
+    }
+
+    .competences-technique h3,
+    .Technologies h3 {
+        font-size: 16px;
+    }
+
+    .tech {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* Section Projets - Très petit mobile */
+    #projets h1 {
+        font-size: 20px;
+    }
+
+    .card-item h3 {
+        font-size: 16px;
+    }
+
+    .card-item p {
+        font-size: 13px;
+    }
+
+    /* Section Contact - Très petit mobile */
+    #contact h2 {
+        font-size: 20px;
+    }
+
+    #contact p {
+        font-size: 13px;
+    }
+}
+
+/* ============================================
+   GRAND ÉCRAN - Écrans larges (à partir de 1440px)
+   ============================================ */
+@media screen and (min-width: 1440px) {
+    
+    /* Container principal - Grand écran */
+    body {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Section Hero - Grand écran */
+    .hero-right img {
+        left: 1000px;
+    }
+
+    /* Section Compétences - Grand écran */
+    #competences h2::after {
+        left: 570px;
+    }
+
+    /* Section Projets - Grand écran */
+    #projets h1::after {
+        left: 620px;
+    }
+
+    /* Section Contact - Grand écran */
+    #contact h2::after {
+        left: 600px;
+    }
+}
+
+/* ============================================
+   ORIENTATION PAYSAGE - Tablettes en mode paysage
+   ============================================ */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* Section Hero - Tablette paysage */
+    #hero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-letf {
+        width: 50%;
+    }
+
+    .hero-right img {
+        width: 45%;
+        max-width: 350px;
+    }
+
+    /* Section À propos - Tablette paysage */
+    #about-me {
+        flex-direction: row;
+    }
+
+    .about-left img {
+        width: 40%;
+        max-width: 350px;
+    }
+
+    .about-right {
+        width: 55%;
+        margin-left: 3%;
+    }
+}
+
