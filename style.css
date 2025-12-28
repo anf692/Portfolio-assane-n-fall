@@ -18,6 +18,7 @@
 
 header{
     background-color: var(--tertiary);
+    margin-bottom: 5%;
 }
 
 .menu{
@@ -93,6 +94,7 @@ header{
     justify-content: space-between ;
     gap: 10px;
     flex-wrap: wrap;
+    margin-bottom: 4%;
 }
 
 .hero-letf{
@@ -160,6 +162,7 @@ header{
     justify-content: center;
     gap: 30px;
     background-color: var(--bg);
+    margin-bottom: 10%;
 }
 
 .score-item{
@@ -185,12 +188,14 @@ style pour la section a propos */
 #about-me{
     display: flex;
     margin: 5%;
+    height: 600px;
+    margin-bottom: 10%;
 }
 
 
 .about-left img{
     width: 500px;
-    height: 60%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -201,7 +206,7 @@ style pour la section a propos */
 .about-right h3{
    font-size: 30px;
    position: relative;
-  padding-bottom: 10px;
+   padding-bottom: 10px;
     color: var(--primary);
     margin-bottom: 4%;
 }
@@ -245,6 +250,99 @@ style pour la section a propos */
     color: var(--tertiary);
 }
 
+
+/* style pour les competences */
+
+.competences{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 10%;
+}
+
+.competences h2{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 50px;
+}
+
+.competences h2::after{
+  content: '';
+  position: absolute;
+  left: 535px;
+  bottom: -7px;
+  width: 300px;
+  height: 4px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
+.competence-item{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.competence-item .fa-solid{
+    height: 30px;
+    width: 30px;
+    color: var(--secondary);
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.competences-technique{
+    background-color:var(--tertiary);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    color: var(--primary);
+    border-radius: 10px;
+    padding: 40px 80px;
+    margin: 50px;
+}
+
+.competences-technique h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.competences-technique ul li{
+    margin-bottom: 10px;
+}
+
+/* style pour les .Technologies maitrisees */
+.Technologies{
+    background-color:var(--tertiary);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    color: var(--primary);
+    border-radius: 10px;
+    padding: 40px 80px;
+    margin: 50px;
+}
+
+.Technologies h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.technologies-item{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.tech{
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 /* style pour les projets */
 
@@ -411,7 +509,7 @@ style pour la section a propos */
     border-radius: 8px;
     width: 50%;
     height: 50%;
-    margin: 60px;
+    margin: 40px;
 }
 
 .contact-left form{
