@@ -147,7 +147,7 @@ header{
 .hero-right img{
     position:absolute;
     top: 20px;
-    left: 850px;
+    left: 800px;
     width: 32%;
     height: 90%;
     padding-left: 10px;
@@ -271,7 +271,7 @@ style pour la section a propos */
 #competences h2::after{
   content: '';
   position: absolute;
-  left: 535px;
+  left: 458px;
   bottom: -7px;
   width: 300px;
   height: 4px;
@@ -377,7 +377,7 @@ style pour la section a propos */
 #projets h1::after{
   content: '';
   position: absolute;
-  left: 535px;
+  left: 458px;
   bottom: -7px;
   width: 200px;
   height: 4px;
@@ -497,7 +497,7 @@ style pour la section a propos */
 #contact h2::after{
   content: '';
   position: absolute;
-  left: 566px;
+  left: 493px;
   bottom: -7px;
   width: 240px;
   height: 4px;
